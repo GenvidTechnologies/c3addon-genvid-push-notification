@@ -1,4 +1,5 @@
 {
+  "name": "c3addon-genvid-push-notification",
   "devDependencies": {
     "http-server": "^14.1.1",
     "shx": "^0.3.4",
