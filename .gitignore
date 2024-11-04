@@ -53,5 +53,9 @@ Thumbs.db
 
 # zip file
 *.c3addon
+
+# Build dirs
 ios/
 html5/
+android/
+build/

@@ -1,0 +1,16 @@
+{
+	"name": "Output",
+	"plugin-id": "TextBox",
+	"sid": 686941177204899,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "Type",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 369180537496266
+		}
+	],
+	"behaviorTypes": []
+}

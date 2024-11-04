@@ -1,0 +1,56 @@
+﻿{
+	"$schema": "../SDK/plugin-sdk/v2/aces.schema.json",
+	"general": {
+		"actions": [
+			{
+				"id": "initialize",
+				"scriptName": "Initialize",
+				"highlight": true,
+				"params": []
+			}
+		],
+		"conditions": [
+			{
+				"id": "on-registration",
+				"isTrigger": true,
+				"scriptName": "OnRegistration"
+			},
+			{
+				"id": "on-notification",
+				"isTrigger": true,
+				"scriptName": "OnNotification"
+			},
+			{
+				"id": "on-error",
+				"isTrigger": true,
+				"scriptName": "OnError"
+			}
+		],
+		"expressions": [
+			{
+				"id": "registration-id",
+				"expressionName": "RegistrationId",
+				"highlight": false,
+				"returnType": "string"
+			},
+			{
+				"id": "registration-type",
+				"expressionName": "RegistrationType",
+				"highlight": false,
+				"returnType": "string"
+			},
+			{
+				"id": "error",
+				"expressionName": "Error",
+				"highlight": false,
+				"returnType": "string"
+			},
+			{
+				"id": "notification",
+				"expressionName": "Notification",
+				"highlight": true,
+				"returnType": "string"
+			}
+		]
+	}
+}

@@ -1,0 +1,12 @@
+{
+	"name": "PushNotification",
+	"plugin-id": "Genvidtech_PushNotification",
+	"sid": 239630923928379,
+	"singleglobal-inst": {
+		"type": "PushNotification",
+		"properties": {},
+		"uid": 8,
+		"sid": 471872955738460,
+		"tags": ""
+	}
+}

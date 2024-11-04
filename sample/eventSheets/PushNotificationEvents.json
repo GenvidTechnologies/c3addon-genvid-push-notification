@@ -1,0 +1,144 @@
+{
+	"name": "PushNotificationEvents",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-error",
+					"objectClass": "PushNotification",
+					"sid": 873801412942724
+				}
+			],
+			"actions": [],
+			"sid": 694714964842119,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Output",
+							"sid": 282374333437235,
+							"parameters": {
+								"instance-variable": "Type",
+								"comparison": 0,
+								"value": "\"Error\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Output",
+							"sid": 390335324398432,
+							"parameters": {
+								"text": "PushNotification.Error"
+							}
+						}
+					],
+					"sid": 238007088379347
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-notification",
+					"objectClass": "PushNotification",
+					"sid": 575928558723969
+				}
+			],
+			"actions": [],
+			"sid": 202266212802850,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Output",
+							"sid": 801652018222021,
+							"parameters": {
+								"instance-variable": "Type",
+								"comparison": 0,
+								"value": "\"Notification\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Output",
+							"sid": 446786129071772,
+							"parameters": {
+								"text": "PushNotification.Notification"
+							}
+						}
+					],
+					"sid": 400079913344799
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-registration",
+					"objectClass": "PushNotification",
+					"sid": 841384245134502
+				}
+			],
+			"actions": [],
+			"sid": 574486229654199,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Output",
+							"sid": 111449240175459,
+							"parameters": {
+								"instance-variable": "Type",
+								"comparison": 0,
+								"value": "\"RegistrationID\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Output",
+							"sid": 463540214413632,
+							"parameters": {
+								"text": "PushNotification.RegistrationID"
+							}
+						}
+					],
+					"sid": 133889304419677
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 930228811865168
+				}
+			],
+			"actions": [
+				{
+					"id": "initialize",
+					"objectClass": "PushNotification",
+					"sid": 250673059446172
+				}
+			],
+			"sid": 711507200208054
+		}
+	],
+	"sid": 404451119990378
+}
