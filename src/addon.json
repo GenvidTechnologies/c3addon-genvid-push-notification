@@ -1,0 +1,32 @@
+﻿{
+	"$schema": "../SDK/plugin-sdk/v2/plugin.addon.schema.json",
+	"is-c3-addon": true,
+	"sdk-version": 2,
+	"min-construct-version": "r401",
+	"type": "plugin",
+	"name": "Push Notification",
+	"id": "Genvidtech_PushNotification",
+	"version": "1.0.0.0",
+	"author": "Genvid Technologies, LLC",
+	"website": "https://bitbucket.org/genvidtech/c3addon-genvid-push-notification",
+	"documentation": "https://bitbucket.org/genvidtech/c3addon-genvid-push-notification/README.md",
+	"description": "Integration of Push Notification",
+	"editor-scripts": [
+		"plugin.js"
+	],
+	"file-list": [
+		"c3runtime/main.js",
+		"c3runtime/instance.js",
+		"c3runtime/conditions.js",
+		"c3runtime/actions.js",
+		"c3runtime/expressions.js",
+		"c3runtime/domSide.js",
+		"c3runtime/plugin.js",
+		"c3runtime/type.js",
+		"lang/en-US.json",
+		"aces.json",
+		"addon.json",
+		"icon.svg",
+		"plugin.js"
+	]
+}

@@ -4,12 +4,35 @@ Genvid Construct 3 Addon Template
 
 ## To use
 
-Explain the API here.
+### Building
+
+This plugin only work under Cordova.
+
+#### Android
+
+For building on Android, you must add the file google-services.json to the root folder
+of your Cordova project.
+
+### In App
+
+1. Call Initialize when you are ready.
+2. On Registration will be called when the Registration ID is available.
+3. On Notification will be called when new Notifications are received and the app is online.
+
+See https://github.com/havesource/cordova-plugin-push/ for more details.
+
+### TODO
+
+1. Check for permissions
+2. Support for channels.
 
 ## To develop
 
 ```bash
-npx http-server src --cors
+npm i
+npm run build
+npm run watch &
+npm run devmode &
 ```
 
 Because of the restricted CSP in Construct3, make sure to use http://localhost:8080/addon.json instead of 127.0.0.1.
@@ -17,7 +40,7 @@ Because of the restricted CSP in Construct3, make sure to use http://localhost:8
 ## To build
 
 ```bash
-cd src
-7z a -tzip -r ..\template-addon.c3addon .
+cd dist
+7z a -tzip -r ..\push-notification-addon.c3addon .
 cd -
 ```

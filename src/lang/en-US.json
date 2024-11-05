@@ -1,0 +1,59 @@
+﻿{
+	"$schema": "../../SDK/plugin-sdk/v2/plugin.lang.schema.json",
+	"languageTag": "en-US",
+	"fileDescription": "Strings for PushNotification.",
+	"text": {
+		"plugins": {
+			"genvidtech_pushnotification": {
+				"name": "PushNotificationPlugin",
+				"description": "A plugin for Push Notification.",
+				"help-url": "https://bitbucket.org/genvidtech/c3addon-genvid-push-notification",
+				"aceCategories": {
+					"general": "General"
+				},
+				"conditions": {
+					"on-registration": {
+						"list-name": "On Registration",
+						"display-text": "On Registration",
+						"description": "Triggered when the registration id is received from the platform"
+					},
+					"on-notification": {
+						"list-name": "On Notification",
+						"display-text": "On Notification",
+						"description": "Triggered when a notification is received"
+					},
+					"on-error": {
+						"list-name": "On Error",
+						"display-text": "On Error",
+						"description": "Triggered when an error is reported"
+					}
+				},
+				"actions": {
+					"initialize": {
+						"list-name": "Initialize the plugin",
+						"display-text": "Initialize Library",
+						"description": "Initialize the callback on the library."
+					}
+				},
+				"expressions": {
+					"registration-id": {
+						"description": "Get the Registration Id once On Registration has been called.",
+						"translated-name": "RegistrationId"
+					},
+					"registration-type": {
+						"description": "Get the Registration Type once On Registration has been called.",
+						"translated-name": "RegistrationType"
+					},
+					"notification": {
+						"description": "A JSON represention of the notification",
+						"translated-name": "Notification"
+					},
+					"error": {
+						"description": "The description of the error",
+						"translated-name": "Error"
+					}
+				}
+			}
+		}
+	}
+}
