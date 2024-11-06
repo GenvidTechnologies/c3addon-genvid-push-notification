@@ -6,7 +6,12 @@
 				"id": "initialize",
 				"scriptName": "Initialize",
 				"highlight": true,
-				"params": []
+				"params": [
+					{
+						"id": "options",
+						"type": "string"
+					}
+				]
 			}
 		],
 		"conditions": [

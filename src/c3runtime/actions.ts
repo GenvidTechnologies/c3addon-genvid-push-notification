@@ -5,9 +5,10 @@ const C3 = globalThis.C3;
 
 C3.Plugins.Genvidtech_PushNotification.Acts =
 {
-	Initialize(this: SDKInstanceClass)
+	Initialize(this: SDKInstanceClass, options: string)
 	{
-		// Post a message to the domSide.js script to update the document title.
-		this._postToDOM("initialize");
+		this._postToDOM("initialize", {
+			options: JSON.parse((options ?? "") !== "" ? options : "{}")
+		});
 	}
 };

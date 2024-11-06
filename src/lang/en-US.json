@@ -31,8 +31,14 @@
 				"actions": {
 					"initialize": {
 						"list-name": "Initialize the plugin",
-						"display-text": "Initialize Library",
-						"description": "Initialize the callback on the library."
+						"display-text": "Initialize Library with [b]{0}[/b]",
+						"description": "Initialize the callback on the library.",
+						"params": {
+							"options": {
+								"desc": "A JSON object to pass to initialization.",
+								"name": "options"
+							}
+						}
 					}
 				},
 				"expressions": {

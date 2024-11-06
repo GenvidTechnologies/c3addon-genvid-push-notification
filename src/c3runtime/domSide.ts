@@ -14,11 +14,11 @@
       // For example the "Set document title" action posts a "set-document-title" message,
       // which will then call _OnSetDocumentTitle().
       this.AddRuntimeMessageHandlers([
-        ["initialize", () => this._OnInitialize()],
+        ["initialize", (e: JSONValue) => this._OnInitialize(e)],
       ]);
     }
 
-    _OnInitialize() {
+    _OnInitialize(e: JSONValue) {
 	  const PN = (<any>globalThis)["PushNotification"];
 	  if (typeof PN === "undefined") {
 		console.info("Need to export as Cordova to be working.");
@@ -26,10 +26,11 @@
 	  }
       console.debug("Initializing push notifications...");
 
-      const push = (<any>globalThis)["PushNotification"].init({
-        android: {},
-        browser: {},
-        ios: {},
+      const push = PN.init({
+        "android": {},
+        "browser": {},
+        "ios": {},
+        ...((e as any).options ?? {}),
       });
 
       push.on("registration", (data: any) => {

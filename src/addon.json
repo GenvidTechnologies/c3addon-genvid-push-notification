@@ -6,7 +6,7 @@
 	"type": "plugin",
 	"name": "Push Notification",
 	"id": "Genvidtech_PushNotification",
-	"version": "1.0.0.0",
+	"version": "1.0.0.1",
 	"author": "Genvid Technologies, LLC",
 	"website": "https://bitbucket.org/genvidtech/c3addon-genvid-push-notification",
 	"documentation": "https://bitbucket.org/genvidtech/c3addon-genvid-push-notification/README.md",
