@@ -25,12 +25,15 @@
 		return;
 	  }
       console.debug("Initializing push notifications...");
-
+      const { android, browser, ios, ...other } = ((e as any).options ?? {}) as any;
       const push = PN.init({
-        "android": {},
-        "browser": {},
-        "ios": {},
-        ...((e as any).options ?? {}),
+        "android": {
+          "icon": "push_icon",
+          ...android ?? {}
+        },
+        "browser": browser ?? {},
+        "ios": ios ?? {},
+        ...other ?? {}
       });
 
       push.on("registration", (data: any) => {

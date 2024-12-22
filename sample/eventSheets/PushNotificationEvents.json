@@ -132,12 +132,40 @@
 			],
 			"actions": [
 				{
-					"id": "initialize",
-					"objectClass": "PushNotification",
-					"sid": 250673059446172
+					"id": "request-project-file",
+					"objectClass": "AJAX",
+					"sid": 769558192017918,
+					"parameters": {
+						"tag": "\"config\"",
+						"file": "push_init.json"
+					}
 				}
 			],
 			"sid": 711507200208054
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-completed",
+					"objectClass": "AJAX",
+					"sid": 211906324465193,
+					"parameters": {
+						"tag": "\"config\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "initialize",
+					"objectClass": "PushNotification",
+					"sid": 247770007629081,
+					"parameters": {
+						"options": "AJAX.LastData"
+					}
+				}
+			],
+			"sid": 782137694222368
 		}
 	],
 	"sid": 404451119990378

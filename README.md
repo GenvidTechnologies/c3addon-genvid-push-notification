@@ -10,8 +10,10 @@ This plugin only work under Cordova.
 
 #### Android
 
-For building on Android, you must add the file google-services.json to the root folder
-of your Cordova project.
+For building on Android, you must:
+
+1. Have a icons named `push_icon.png`
+2. Add the file google-services.json to the root folder of your Cordova project.
 
 ### In App
 

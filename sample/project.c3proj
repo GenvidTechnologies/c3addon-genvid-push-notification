@@ -8,11 +8,18 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
+			"id": "AJAX",
+			"name": "AJAX",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Genvidtech_PushNotification",
 			"name": "PushNotificationPlugin",
 			"author": "Genvid Technologies",
 			"bundled": false,
-			"version": "1.0.0.0",
+			"version": "1.0.0.2",
 			"sdkVersion": 2
 		},
 		{
@@ -35,7 +42,8 @@
 		"items": [
 			"Label",
 			"Output",
-			"PushNotification"
+			"PushNotification",
+			"AJAX"
 		],
 		"subfolders": []
 	},
@@ -135,12 +143,29 @@
 					"icon-info": {
 						"purpose": "loading-logo"
 					}
+				},
+				{
+					"name": "push_icon.png",
+					"type": "image/png",
+					"sid": 196780859434758,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
 				}
 			],
 			"subfolders": []
 		},
 		"general": {
-			"items": [],
+			"items": [
+				{
+					"name": "push_init.json",
+					"type": "application/json",
+					"sid": 779233768263362,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		}
 	},

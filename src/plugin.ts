@@ -40,6 +40,11 @@ const PLUGIN_CLASS = SDK.Plugins.Genvidtech_PushNotification = class PushNotific
 			target: "app/google-services.json",
 			platform: "android" 
 		});
+		this._info.AddCordovaResourceFile({
+			src: "www/icons/push_icon.png",
+			target: "app/src/main/res/drawable/push_icon.png",
+			platform: "android" 
+		});
 
 		// Set the domSide.js script to run in the context of the DOM
 		this._info.SetDOMSideScripts(["c3runtime/domSide.js"]);

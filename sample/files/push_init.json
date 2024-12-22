@@ -1,0 +1,13 @@
+{
+	"android" :{
+		"iconColor": "#00e1c8",
+		"forceShow": true
+	},
+	"ios": {
+		"alert": true,
+		"sound": true,
+		"badge": true,
+		"clearBadge": true,
+		"forceShow": true
+	}
+}
