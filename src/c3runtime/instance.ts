@@ -39,20 +39,20 @@ class PushNotificationInstance extends globalThis.ISDKInstanceBase {
   _onNotification(e: JSONValue) {
     this._notification = e;
 
-    // Dispatch script event so callers can use addEventListener("on-registration", ...)
+    // Dispatch script event so callers can use addEventListener("on-notification", ...)
     this.dispatchEvent(new C3.Event("on-notification", true));
 
-    // Trigger 'On Registration' in the event system
+    // Trigger 'On Notification' in the event system
     this._trigger(C3.Plugins.Genvidtech_PushNotification.Cnds.OnNotification);
   }
 
   _onError(e: JSONValue) {
-    this._error = (e as any)["error"];
+    this._error = (e as JSONObject)["error"] as string;
 
-    // Dispatch script event so callers can use addEventListener("on-registration", ...)
+    // Dispatch script event so callers can use addEventListener("on-error", ...)
     this.dispatchEvent(new C3.Event("on-error", true));
 
-    // Trigger 'On Registration' in the event system
+    // Trigger 'On Error' in the event system
     this._trigger(C3.Plugins.Genvidtech_PushNotification.Cnds.OnError);
   }
 

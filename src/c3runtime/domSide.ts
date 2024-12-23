@@ -19,30 +19,28 @@
     }
 
     _OnInitialize(e: JSONValue) {
-	  const PN = (<any>globalThis)["PushNotification"];
-	  if (typeof PN === "undefined") {
-		console.info("Need to export as Cordova to be working.");
-		return;
-	  }
-      console.debug("Initializing push notifications...");
-      const { android, browser, ios, ...other } = ((e as any).options ?? {}) as any;
+      const PN = (<any>globalThis)["PushNotification"];
+      if (typeof PN === "undefined") {
+        console.info("Need to export as Cordova to be working.");
+        return;
+      }
+      const { android, browser, ios, ...other } = ((e as any).options ??
+        {}) as any;
       const push = PN.init({
-        "android": {
-          "icon": "push_icon",
-          ...android ?? {}
+        android: {
+          icon: "push_icon",
+          ...(android ?? {}),
         },
-        "browser": browser ?? {},
-        "ios": ios ?? {},
-        ...other ?? {}
+        browser: browser ?? {},
+        ios: ios ?? {},
+        ...(other ?? {}),
       });
 
       push.on("registration", (data: any) => {
-        console.debug("Push Notification registration:", { data });
         this.PostToRuntime("on-registration", data);
       });
 
       push.on("notification", (data: any) => {
-        console.debug("Push Notification received:", { data });
         this.PostToRuntime("on-notification", data);
         // data.message,
         // data.title,
@@ -53,8 +51,8 @@
       });
 
       push.on("error", (e: Error) => {
-        console.error("Push notification error:", e.message, { error: e });
-        this.PostToRuntime("on-error", e.message);
+        const err = e.message ?? JSON.stringify(e);
+        this.PostToRuntime("on-error", { error: err });
       });
     }
   };
