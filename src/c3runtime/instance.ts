@@ -5,8 +5,8 @@ const C3 = globalThis.C3;
 const DOM_COMPONENT_ID = "Genvidtech_PushNotification";
 
 class PushNotificationInstance extends globalThis.ISDKInstanceBase {
-  _registration: any;
-  _notification: any;
+  _registration?: JSONObject;
+  _notification?: JSONValue;
   _error: string;
 
   constructor() {
@@ -27,7 +27,7 @@ class PushNotificationInstance extends globalThis.ISDKInstanceBase {
   }
 
   _onRegistration(e: JSONValue) {
-    this._registration = e;
+    this._registration = e as JSONObject;
 
     // Dispatch script event so callers can use addEventListener("on-registration", ...)
     this.dispatchEvent(new C3.Event("on-registration", true));
@@ -66,6 +66,7 @@ class PushNotificationInstance extends globalThis.ISDKInstanceBase {
     };
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   _loadFromJson(o: JSONValue) {
     // load state for savegames
   }

@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 40702,
+	"savedWithRelease": 44002,
 	"name": "Push Notification Sample",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -19,7 +19,7 @@
 			"name": "PushNotificationPlugin",
 			"author": "Genvid Technologies",
 			"bundled": false,
-			"version": "1.0.0.2",
+			"version": "1.0.0.3",
 			"sdkVersion": 2
 		},
 		{
@@ -47,6 +47,7 @@
 		],
 		"subfolders": []
 	},
+	"functionsName": "Functions",
 	"autosaveData": null,
 	"containers": [],
 	"families": {
@@ -186,11 +187,12 @@
 	},
 	"properties": {
 		"description": "Sample for Push Notification",
-		"version": "1.0.0.0",
+		"version": "1.0.0.3",
+		"autoIncrementVersion": false,
 		"author": "",
 		"authorEmail": "",
 		"authorWebsite": "",
-		"appId": "com.genvid.burbank",
+		"appId": "com.genvidtech.push",
 		"pixelRounding": false,
 		"zAxisScale": "normalized",
 		"fov": 0.7853981633974483,
@@ -233,7 +235,6 @@
 		"preloadSounds": true,
 		"cordovaiOSScheme": "app",
 		"cordovaAndroidScheme": "https",
-		"autoReloadScriptsOnPreview": false,
 		"exportFileStructure": "folders",
 		"uidAllocationMode": "increment"
 	},

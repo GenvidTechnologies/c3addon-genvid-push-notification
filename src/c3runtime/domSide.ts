@@ -19,28 +19,29 @@
     }
 
     _OnInitialize(e: JSONValue) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const PN = (<any>globalThis)["PushNotification"];
       if (typeof PN === "undefined") {
         console.info("Need to export as Cordova to be working.");
         return;
       }
-      const { android, browser, ios, ...other } = ((e as any).options ??
-        {}) as any;
+      const { android, browser, ios, ...other } = ((e as JSONObject).options ??
+        {}) as JSONObject;
       const push = PN.init({
         android: {
           icon: "push_icon",
-          ...(android ?? {}),
+          ...<JSONObject>(android ?? {}),
         },
         browser: browser ?? {},
         ios: ios ?? {},
         ...(other ?? {}),
       });
 
-      push.on("registration", (data: any) => {
+      push.on("registration", (data: JSONValue) => {
         this.PostToRuntime("on-registration", data);
       });
 
-      push.on("notification", (data: any) => {
+      push.on("notification", (data: JSONValue) => {
         this.PostToRuntime("on-notification", data);
         // data.message,
         // data.title,
