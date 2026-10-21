@@ -15,7 +15,10 @@
     "default_branch": "main"
   },
   "features": {},
-  "paths": {},
+  "paths": {
+    "docs/TOC.md": "wiki/index.md",
+    "docs/decisions/": "wiki/decisions/"
+  },
   "wiki": {
     "wikiDir": "wiki",
     "rawDir": "raw"

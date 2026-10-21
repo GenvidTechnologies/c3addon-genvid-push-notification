@@ -4,9 +4,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 @CONVENTIONS.md
 
-Project docs are indexed in `docs/TOC.md`. Project knowledge (sources, decisions, findings) lives in
-the LLM-wiki under `wiki/`, with immutable source captures under `raw/`. Maintain it with
-`/gvt-dev:maintain-wiki` (ingest / query / lint).
+There is no `docs/` directory. Project knowledge (sources, decisions, findings) lives in the
+LLM-wiki under `wiki/`, with immutable source captures under `raw/`. `wiki/index.md` doubles as
+the docs index (`paths["docs/TOC.md"]` in `.gvt-agent.json`), and ADRs go in `wiki/decisions/`
+(`paths["docs/decisions/"]`). Maintain the wiki with `/gvt-dev:maintain-wiki` (ingest / query / lint).
 
 ## What this is
 
