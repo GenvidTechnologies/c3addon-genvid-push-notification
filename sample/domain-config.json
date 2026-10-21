@@ -1,0 +1,11 @@
+{
+  "domains": {
+    "PushNotificationSample": {
+      "description": "Test project exercising the Push Notification addon"
+    }
+  },
+  "overrides": {
+    "eventSheets/PushNotificationEvents.json": "PushNotificationSample",
+    "layouts/PushNotificationLayout.json": "PushNotificationSample"
+  }
+}
