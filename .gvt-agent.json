@@ -17,7 +17,8 @@
   "features": {},
   "paths": {
     "docs/TOC.md": "wiki/index.md",
-    "docs/decisions/": "wiki/decisions/"
+    "docs/decisions/": "wiki/decisions/",
+    "c3project": "sample/project.c3proj"
   },
   "wiki": {
     "wikiDir": "wiki",
