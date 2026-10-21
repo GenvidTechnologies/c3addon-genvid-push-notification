@@ -1,0 +1,23 @@
+{
+  "project": {
+    "name": "c3addon-genvid-push-notification",
+    "description": "Construct 3 plugin addon wrapping @havesource/cordova-plugin-push for Cordova exports",
+    "languages": ["typescript"]
+  },
+  "commands": {
+    "test": "",
+    "lint": "npm run lint",
+    "build": "npm run build",
+    "validate": "npm run lint && npx tsc -p src --noEmit"
+  },
+  "repo": {
+    "host": "github",
+    "default_branch": "main"
+  },
+  "features": {},
+  "paths": {},
+  "wiki": {
+    "wikiDir": "wiki",
+    "rawDir": "raw"
+  }
+}

@@ -2,6 +2,12 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+@CONVENTIONS.md
+
+Project docs are indexed in `docs/TOC.md`. Project knowledge (sources, decisions, findings) lives in
+the LLM-wiki under `wiki/`, with immutable source captures under `raw/`. Maintain it with
+`/gvt-dev:maintain-wiki` (ingest / query / lint).
+
 ## What this is
 
 A Construct 3 **plugin addon** (SDK v2, TypeScript) that wraps the Cordova plugin
