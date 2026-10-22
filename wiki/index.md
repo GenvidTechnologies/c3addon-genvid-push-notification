@@ -17,6 +17,10 @@ subdirectory's own `index.md`. Each entry's description is the linked
 page's frontmatter `description`, so the index and the page can't drift.
 See `wiki/schema.md` for the page format and maintenance rules.
 
+## Decision Records
+
+* [Decision Records](decisions/index.md) - Architecture and trade-off decisions for this addon repo, one record per decision.
+
 ## Schema
 
 * [Wiki Maintenance Schema](schema.md) - The maintenance rules for this wiki — page format, create-vs-update lifecycle, raw/ immutability, staleness policy and the verb contract.
