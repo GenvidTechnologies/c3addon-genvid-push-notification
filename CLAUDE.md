@@ -97,12 +97,12 @@ ticket. Example: `BUR-5481: Handled string as error on error`.
 
 ## Branching
 
-Branch from `main`. Name ticket branches `BUR-<n>-<slug>` (for example
-`BUR-5481-fixed-android-error-on-denied`) and non-ticket work `chore-<slug>` (for
-example `chore-claude-conventions`).
+Branch from `main`. Branch names carry no ticket prefix: use a kebab-case
+`<type>-<slug>`, for example `chore-claude-conventions` or `fix-android-error-on-denied`.
 
 ## Pull Request Format
 
-PRs are opened on GitHub against `main` and squash-merged. The PR title becomes the
-squash commit subject, so it follows the commit format (`BUR-<n>: <subject>`), and
-GitHub appends ` (#N)`.
+PRs are opened on GitHub against `main` and squash-merged. The title is a plain
+descriptive subject with no ticket prefix, for example
+`Update plugin location, author and conventions`. GitHub appends ` (#N)` to the squash
+commit subject.
