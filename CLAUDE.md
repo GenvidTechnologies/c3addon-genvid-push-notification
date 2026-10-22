@@ -92,8 +92,9 @@ payload, dispatches a script `C3.Event`, and `_trigger`s the matching condition.
 
 ## Commit Format
 
-`BUR-<n>: <subject>`, where `BUR-<n>` is the Jira key. Use `BUR-0000` when there is no
-ticket. Example: `BUR-5481: Handled string as error on error`.
+A plain imperative subject with no ticket prefix, for example
+`Handle a string as the error payload`. Older commits carry a `BUR-<n>:` Jira prefix;
+don't add one to new commits.
 
 ## Branching
 
