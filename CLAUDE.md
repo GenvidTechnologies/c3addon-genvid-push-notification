@@ -80,9 +80,30 @@ payload, dispatches a script `C3.Event`, and `_trigger`s the matching condition.
 - `src/ts-defs/` holds Construct's vendored type definitions. Don't edit them by hand;
   refresh them from Construct when the SDK is updated.
 - `sample/` is a Construct 3 test project (folder format) that uses the addon.
+  `.gvt-agent.json` points the gvt-construct3 tooling at it (`paths.c3project`).
+  `c3-domain-manager` regenerates `sample/extracted/domain-index/` from
+  `sample/domain-config.json` when its MCP server starts, so commit that folder
+  after changing the config.
 - `dist/`, `build/` and `*.c3addon` are gitignored build outputs.
 - Bump `version` in `src/addon.json` when releasing a new `.c3addon`.
-- Commits and branches use the Jira key prefix `BUR-<n>` (for example
-  `BUR-5481-fixed-android-error-on-denied`). The `origin` remote is GitHub
-  (`genvid-holdings`), but the `website`/`documentation` URLs in `addon.json` and the
-  lang `help-url` still point at Bitbucket.
+- The repo lives at `github.com/GenvidTechnologies/c3addon-genvid-push-notification`.
+  That URL is also the `website`/`documentation` in `addon.json` and the lang
+  `help-url`, so keep them in sync if it moves again.
+
+## Commit Format
+
+A plain imperative subject with no ticket prefix, for example
+`Handle a string as the error payload`. Older commits carry a `BUR-<n>:` Jira prefix;
+don't add one to new commits.
+
+## Branching
+
+Branch from `main`. Branch names carry no ticket prefix: use a kebab-case
+`<type>-<slug>`, for example `chore-claude-conventions` or `fix-android-error-on-denied`.
+
+## Pull Request Format
+
+PRs are opened on GitHub against `main` and squash-merged. The title is a plain
+descriptive subject with no ticket prefix, for example
+`Update plugin location, author and conventions`. GitHub appends ` (#N)` to the squash
+commit subject.

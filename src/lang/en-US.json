@@ -7,7 +7,7 @@
 			"genvidtech_pushnotification": {
 				"name": "PushNotificationPlugin",
 				"description": "A plugin for Push Notification.",
-				"help-url": "https://bitbucket.org/genvidtech/c3addon-genvid-push-notification",
+				"help-url": "https://github.com/GenvidTechnologies/c3addon-genvid-push-notification",
 				"aceCategories": {
 					"general": "General"
 				},

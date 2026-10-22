@@ -25,7 +25,7 @@ const PLUGIN_CLASS = SDK.Plugins.Genvidtech_PushNotification = class PushNotific
 		this._info.SetName(globalThis.lang(".name"));
 		this._info.SetDescription(globalThis.lang(".description"));
 		this._info.SetCategory(PLUGIN_CATEGORY);
-		this._info.SetAuthor("Genvid Technologies");
+		this._info.SetAuthor("Genvid Technologies, LLC");
 		this._info.SetHelpUrl(globalThis.lang(".help-url"));
 		this._info.SetIsSingleGlobal(true);
 		this._info.SetRuntimeModuleMainScript("c3runtime/main.js");
