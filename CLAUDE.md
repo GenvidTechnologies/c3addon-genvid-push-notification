@@ -83,6 +83,7 @@ payload, dispatches a script `C3.Event`, and `_trigger`s the matching condition.
 - `dist/`, `build/` and `*.c3addon` are gitignored build outputs.
 - Bump `version` in `src/addon.json` when releasing a new `.c3addon`.
 - Commits and branches use the Jira key prefix `BUR-<n>` (for example
-  `BUR-5481-fixed-android-error-on-denied`). The `origin` remote is GitHub
-  (`genvid-holdings`), but the `website`/`documentation` URLs in `addon.json` and the
-  lang `help-url` still point at Bitbucket.
+  `BUR-5481-fixed-android-error-on-denied`). The repo lives at
+  `github.com/GenvidTechnologies/c3addon-genvid-push-notification`. That URL is also
+  the `website`/`documentation` in `addon.json` and the lang `help-url`, so keep them in
+  sync if it moves again.

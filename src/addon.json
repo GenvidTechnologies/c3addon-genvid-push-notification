@@ -8,8 +8,8 @@
 	"id": "Genvidtech_PushNotification",
 	"version": "1.0.0.3",
 	"author": "Genvid Technologies, LLC",
-	"website": "https://bitbucket.org/genvidtech/c3addon-genvid-push-notification",
-	"documentation": "https://bitbucket.org/genvidtech/c3addon-genvid-push-notification/README.md",
+	"website": "https://github.com/GenvidTechnologies/c3addon-genvid-push-notification",
+	"documentation": "https://github.com/GenvidTechnologies/c3addon-genvid-push-notification/blob/main/README.md",
 	"description": "Integration of Push Notification",
 	"editor-scripts": [
 		"plugin.js"
